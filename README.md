@@ -1,14 +1,15 @@
 # ai beginning
 ## 目录
-* [软件的安装](#软件的安装)
+* [软件的安装和基本的配置](#软件的安装和基本的配置)
 * [数学基础](#数学基础)
 * [python基础](#python基础)
-## 软件的安装
+## 软件的安装和基本的配置
 * [Anaconda的安装](#Anaconda的安装)
 * [python的安装](#python的安装)
 * [pytorch的发展和安装](#pytorch的发展和安装)
 * [python的包的介绍](#python的包的介绍)
 * [相关的基础配置](#相关的基础配置)
+* [根据使用的gpu来选择对应的pytorch版本进行安装](#根据使用的gpu来选择对应的pytorch版本进行安装)
 ### Anaconda的安装
 * 首先就是人工智能的必备的软件 Anaconda 的安装
 * 安装的地址 [Anaconda](https://www.anaconda.com/products/individual)
@@ -177,10 +178,10 @@ pip list
         rm -rf 虚拟环境的名字
         ```
     * 比较常用的方式就是使用anaconda来创建虚拟环境
-## 根据使用的gpu来选择对应的pytorch版本进行安装
+### 根据使用的gpu来选择对应的pytorch版本进行安装
   * cuda的安装
-  * 可以先通过pytorch来查看对应的cude版本
-  * [查看pytorch对应的cude版本](https://pytorch.org/get-started/locally/)
+  * 可以先通过pytorch来查看对应的cuda版本
+  * [查看pytorch对应的cuda版本](https://pytorch.org/get-started/locally/)
   * [cuda过往版本下载的链接](https://developer.nvidia.com/cuda-toolkit-archive)
   * pytorch的安装
     * [pytorch](https://pytorch.org/)
