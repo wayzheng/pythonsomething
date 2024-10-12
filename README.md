@@ -198,3 +198,29 @@ pip list
     2. 然后就是将下载的cuDNN的软件进行解压，然后将解压的文件夹中的bin、include、lib文件夹中的内容复制到cuda的安装目录中
     3. 之后来到extras\demo_suite\文件夹目录中 打开命令行窗口 输入 `bandwidthTest.ext` 如果最后的结果是PASS 就是说明安装成功 通过使用`deviceQuery.exe`来查看gpu的信息
     4. 之后就是可以创建一个项目 比如说是在pycharm中先创建一个项目 然后在项目中创建一个虚拟环境
+    5. 创建一个虚拟环境
+        * 首先通过 windows + R 打开运行的窗口 然后输入cmd 然后输入以下的命令
+        * 创建一个虚拟环境
+        ```shell
+        conda create -n 虚拟环境的名字 python=版本号
+       # 比如 conda create -n pytorch_gpu python=3.12
+        ```
+        * 然后就是激活虚拟环境
+         ```shell
+          conda activate 虚拟环境的名字
+          # 比如 conda activate pytorch_gpu
+         ```
+        * 之后就是安装pytorch
+        * 首先通过使用`cd 下载torch文件的目录`来进入下载torch软件的目录
+        * 然后通过使用以下的命令来安装torch
+        ```shell
+        pip install torch-1.7.1+cu110-cp38-cp38-win_amd64.whl
+       # 输入路径的时候其实只要输入tor之后再输入tab键之后就是可以自动将路径补全了
+        ```
+       * 安装完成之后 终端的界面就是会显示出先这样的样子![安装成功](./static/img/successful_install_torch.png)
+    6. 完成虚拟环境的创建之后 即时可以通过撇孩子pycharm环境解释器来设置虚拟环境的解释器
+        * 可以直接通过下面的方式来进行配置![配置解释器](./static/img/config_python_interpreter.png)
+    7. 之后进行等待就是可以了 
+    8. 然后可以通过使用code文件夹中的check文件夹中的torch_test.py文件来测试是否安装成功
+  
+         
