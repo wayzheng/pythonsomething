@@ -197,4 +197,4 @@ pip list
     1. 首先要将下载的cuda的软件的进行安装 安装完成之后 可以来到安装目录中 打开命令行窗口 之后输入`nvcc --version` 如果显示出版本号 说明安装成功
     2. 然后就是将下载的cuDNN的软件进行解压，然后将解压的文件夹中的bin、include、lib文件夹中的内容复制到cuda的安装目录中
     3. 之后来到extras\demo_suite\文件夹目录中 打开命令行窗口 输入 `bandwidthTest.ext` 如果最后的结果是PASS 就是说明安装成功 通过使用`deviceQuery.exe`来查看gpu的信息
-    
+    4. 之后就是可以创建一个项目 比如说是在pycharm中先创建一个项目 然后在项目中创建一个虚拟环境
