@@ -101,3 +101,14 @@ pip install torch==1.7.1
   4. 文档规范 [pytorch中文文档](https://pytorch.apachecn.org/docs/1.0/) [pytorch英文文档](https://pytorch.org/docs/stable/index.html)
   5. 开发者多
   6. 由facebook维护和开发
+### pythong的包的介绍
+* 工具包也称为依赖包、模块、库、包等，是一组可重用的代码，用于解决特定问题或执行特定任务
+* python的工具包有很多，比如说numpy、pandas、matplotlib、scikit-learn等
+* 主要就是分为内置包和第三方包两种
+* 内置包就是python自带的包，比如说os、sys、math等
+* 第三方包就是需要我们自己安装的包，比如说numpy、pandas、matplotlib等
+* 但是如果想要查看已经安装的库的话，可以使用以下的命令
+```shell
+pip list
+```
+* 就可以查看已经安装的库了
