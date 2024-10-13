@@ -25,7 +25,7 @@ conda --version
 ```shell
 jupyter notebook --generate-config
 ```
-* 会生成一个配置文件，然后找到配置文件中的#c.NotebookApp.notebook_dir = '' 这一行，然后修改路径即可 之后还要将#给删除
+* 会生成一个配置文件![jupyter配置文件](./static/img/jupyter_config_file.png)，然后找到配置文件中的#c.NotebookApp.notebook_dir = '' 这一行，然后修改路径即可 之后还要将#给删除
 * 但是如果没有找到这一行的话, 可以在查看是否有# c.ServerApp.root_dir = '' 将'' 的内容修改成为你想要的路径即可
 * 之后就可以使用jupyter notebook 来打开notebook了
 ### python的安装
@@ -223,5 +223,44 @@ pip list
         * 可以直接通过下面的方式来进行配置![配置解释器](./static/img/config_python_interpreter.png)
     7. 之后进行等待就是可以了 
     8. 然后可以通过使用code文件夹中的check文件夹中的torch_test.py文件来测试是否安装成功
-  
-         
+> 创建虚拟环境的一些tips 
+> 1. 安装anaconda的时候要都选添加环境变量
+> 2. 创建虚拟环境的时候要注意python的版本号
+> 3. 为了使得后续的python第三方库安装的速度更快 可以使用国内的镜像源 比如清华的镜像源和中科大的镜像源等
+> 4. 配置中科大的源可以使用以下的命令
+```shell
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
+conda config --set show_channel_urls yes
+```
+> 5. 配置清华的源可以使用一下的命令 推荐使用清华的镜像源 更加稳定
+```shell
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --set show_channel_urls yes
+```
+> 6. 如果之后创建的虚拟环境一直失败 就是可以使用清除配置的命令将配置清除 来重新设置
+```shell
+conda config --remove-key channels
+```
+> 7. 如果想要查看当前的配置的话 可以使用以下的命令
+```shell
+conda config --show
+```
+> 8. 如果要删除虚拟环境 就是可以使用下面的命令
+```shell
+conda remove --name 虚拟环境名字 --all
+```
+> 9. 如果要查看所有的创建的虚拟环境 就是可以使用一下的命令
+```shell
+conda info --envs
+```
+> 10. 如果要跳出当前的虚拟环境 就是可以是会用以下的命令
+```shell
+conda deactivate
+```
+> 11. 安装特定版本的cpu版本的pytorch可以使用一下的命令
+```shell
+pip install torch==1.7.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+
+
