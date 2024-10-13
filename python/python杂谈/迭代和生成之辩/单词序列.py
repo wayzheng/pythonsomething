@@ -26,11 +26,11 @@ import reprlib
 
 RE_WORD = re.compile(r"\w+")
 
-class Sentence(object):
+class SentenceOne(object):
 
     def __init__(self, text):
         self.text = text
-        self.words = ER_WORD.findall(text)
+        self.words = RE_WORD.findall(text)
 
     def __len__(self):
         return len(self.words)
@@ -47,6 +47,15 @@ def main():
     print(s)
     print(list(s))
 
+    s1 = SentenceOne("hello world javascript")
+    it = iter(s1)
+    print("iter迭代器:", it)
+    print(next(it))
+    print(next(it))
+    print(next(it))
+    # print(next(it)) 此时就是会发生报错 这是因为迭代器已经迭代完毕了 但是继续爹地啊的话就是会爆出StopIteration的异常
+    print("将s1变成一个序列", list(it)) # 此时就是会的到一个空的序列列表 这是因为迭代器已经迭代完成了 所以内部就是一个空的一个序列
+    print("将s1重新变成一个序列", list(iter(s1)))
 
 if __name__ == "__main__":
     main()

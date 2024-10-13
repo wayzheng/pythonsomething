@@ -36,4 +36,6 @@ while True:
 * __iter__方法 返回self 以便在应该使用可迭代对象的地方使用迭代器
 ![图示](../../static/img/diff_iterable_iterator.png)
 * iterable和iterator抽象基类 以斜体显示的就是抽象方法 具体的Iterable.__iter__方法应该返回一个iterator实例 具体的Iterator类必须实现__next__方法 Iterator.__iter__方法直接返回实例本身
-* 
+## 典型的迭代器
+* Sentence类的实现 因为它实现了__iter__方法 构建并返回一个SentenceIterator实例
+* 可迭代对象有一个__iter__方法 每一次都是例化一个新的迭代器 而迭代器就要实现__next__方法 返回单个元素 此外嗨哟啊实现__iter__方法 来返回迭代器本身
