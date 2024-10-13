@@ -21,7 +21,25 @@ class Sentence(object):
 
     def __repr__(self):
         return f"Sentence({self.text})"
+import re
+import reprlib
 
+RE_WORD = re.compile(r"\w+")
+
+class Sentence(object):
+
+    def __init__(self, text):
+        self.text = text
+        self.words = ER_WORD.findall(text)
+
+    def __len__(self):
+        return len(self.words)
+
+    def __getitem__(self, position):
+        return self.words[position]
+
+    def __repr__(self):
+        return f"Sentence({reprlib.repr(self.text)})"
 def main():
     s = Sentence("hello world javascript python 3.12 what up")
     for word in s.words:
