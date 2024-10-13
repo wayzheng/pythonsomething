@@ -10,6 +10,7 @@
 * [python的包的介绍](#python的包的介绍)
 * [相关的基础配置](#相关的基础配置)
 * [根据使用的gpu来选择对应的pytorch版本进行安装](#根据使用的gpu来选择对应的pytorch版本进行安装)
+* [tensorflow的安装和配置](#tensorflow的安装和配置)
 ### Anaconda的安装
 * 首先就是人工智能的必备的软件 Anaconda 的安装
 * 安装的地址 [Anaconda](https://www.anaconda.com/products/individual)
@@ -261,6 +262,41 @@ conda deactivate
 ```shell
 pip install torch==1.7.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
 ```
-
-
-
+### tensorflow的安装和配置
+* windows安装和下载
+* 首先就是简单的CPU版本的安装 但是注意不要在gpu环境下来实现一大非常大的模型项目 可能会导致cpu出现不可挽回的错误
+* [tensorflow的官网](https://www.tensorflow.org/install/source_windows?hl=zh-cn)
+* 通过使用命令行方式来就进行安装
+  * 首先可以通过使用conda来创建一个虚拟的环境
+    * ```shell
+        conda create -n tensorflow_cpu python=3.8
+        ```
+    * 之后激活这个虚拟环境
+    * ```shell
+        conda activate tensorflow_cpu
+        ```
+    * 然后就是来安装tensorflow 比如安装的就是cpu版本的tensorflow2.0.0
+    * ```shell
+        # 通过使用清华源来进行安装
+        pip install tensorflow==2.0.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
+        ```
+  * 然后就是来安装gpu版本的tensorflow
+  * 首先就是来安装cuda的软件
+  * 然后就是来安装cuDNN的软件
+  * 然后就是来安装tensorflow
+  * ```shell
+    # 通过使用清华源来进行安装
+    pip install tensorflow-gpu==2.0.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
+    ```
+  * 个人的设置
+  * ```shell
+    # 通过使用清华源来进行安装
+    pip install tensorflow-gpu==2.2.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
+    ```
+  * 之后还要安装一个东西 这样就是不会报错了
+  * ```shell
+    conda install cudatoolkit=10.1.243
+    ```
+  * 通过使用python来导入库
+  * 出现这样的画面就是表示安装成功了 ![安装成功](./static/img/successful_install_tensorflow_gpu.png)
+    
