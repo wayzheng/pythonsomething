@@ -15,10 +15,12 @@ def main():
     print(isinstance(nums, Iterator))
     print(isinstance(iter(nums), Iterator))
     # 通过使用()创建的就是一个生成器对象
-    nums1 = (num for num in range(10)) # 生成器表达式 generator expression
+    nums1 = (num for num in range(2)) # 生成器表达式 generator expression
     print(type(nums1))
     print(nums1) # 生成一个生成器对象而不是一个数据
-
+    print(next(nums1))
+    print(next(nums1))
+    # print(next(nums1)) 此时就是会发生报错 因为生成器也是一个迭代器 也是一个可迭代对象
 
 if __name__ == "__main__":
     main()
