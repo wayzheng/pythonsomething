@@ -45,6 +45,7 @@ class SentenceIterator(object):
     def __iter__(self):
         return self
 def main():
+    ...
 
 
 

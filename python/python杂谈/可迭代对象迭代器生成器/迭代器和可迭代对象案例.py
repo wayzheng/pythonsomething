@@ -30,12 +30,10 @@ class MyIterator(object):
             self.index += 1
             return item
         else:
-            raise StopIteration
+            raise StopIteration # 抛出异常 之后就是会结束迭代
 
     def __iter__(self):
         return self
-
-
 
 def main():
     mylist = Mylist()
@@ -51,8 +49,6 @@ def main():
     # print(next(mylist_iterator)) 此时会发生报错
     for i in mylist:
         print(i)
-
-
 
 if __name__ == "__main__":
     main()
