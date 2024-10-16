@@ -15,7 +15,7 @@ def create_point():
         y = k * x + b
         temp = yield x, y
         if temp:
-            k, b = temp
+            k = temp
         x = y
 
 def main():
@@ -24,7 +24,7 @@ def main():
     print(next(cp))
     print(cp.send(3))
     print(cp.send(4))
-    print(cp.send(5, 10))
+    print(cp.send(5))
 
 
 if __name__ == "__main__":
