@@ -17,6 +17,10 @@ class Array(object):
         return self.__length
     # 设置迭代
     def __iter__(self):
+        """
+        迭代器
+        :return:
+        """
         for value in self.__item:
             yield value
 
